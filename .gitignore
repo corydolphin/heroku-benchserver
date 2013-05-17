@@ -1,39 +1,15 @@
-# Virtualenv
-ENV
-env
-.Python
-include
-lib
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
 
-# Python Packages
-*.egg
-*.egg-info
-bin
-build
-dist
-sdist
-eggs
-env
-parts
-var
-develop-eggs
-.installed.cfg
+pids
+logs
+results
 
-# Pip Installer Log
-pip-log.txt
-
-# Unit test / coverage
-.coverage
-.tox
-
-# Mac OS X
-.DS_Store
-
-# Generated files
-*.[oa]
-*.py[co]
-*.rbc
-
-#Temporary Files
-*.py~
-*.html~
+npm-debug.log
+node_modules

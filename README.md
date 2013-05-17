@@ -10,9 +10,6 @@ To use, clone this repository and simply deploy to heroku and set the environmen
 
     $ git clone git@github.com:wcdolphin/heroku-benchpack.git
     $ herok apps:create
-    $ heroku config:add LD_LIBRARY_PATH=/app/vendor/apache-2.4.4/lib/:$LD_LIBRARY_PATH
-    $ heroku config:add BUILDPACK_URL=https://github.com/ddollar/heroku-buildpack-multi.git
-    $ heroku config:add PATH=/app/vendor/apache-2.4.4/bin/:$PATH
     $ git push heroku master
 
 To actually bench a website, use the standard ab commandline options, prefixed by `heroku run`:
@@ -76,3 +73,5 @@ Result:
       98%   1684
       99%   1897
      100%   4582 (longest request)
+ 
+1
