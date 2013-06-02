@@ -13,11 +13,12 @@ app.get('/', function(request, response) {
 });
 
 app.get('/bench', function(req, res) {
-  var command = spawn('/app/vendor/apache-2.4.4/bin/ab', ['-n', '1000','-c', '1000', 'http://nodejssimple.herokuapp.com/']);
+  console.log(req.params);
+  var command = spawn('ab', ['-n', req.params.n || '1000','-c', req.params.c || '1000', 'http://nodejssimple.herokuapp.com/']);
   var output  = [];
 
   command.stdout.on('data', function(chunk) {
-    output.push(chunk);
+    output.push('stdout:' + chunk);
   }); 
   command.stderr.on('data', function(data) {
     console.log('stderr: ' + data);
