@@ -4,6 +4,8 @@ var express = require("express")
 
 var app = express();
 
+var bench_queue = [];
+
 app.use(express.logger());
 
 app.get('/', function(request, response) {
